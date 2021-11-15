@@ -1,47 +1,96 @@
 body {
   background-color: #ffffff;
-  padding: 5px;
+  padding: 0px;
   margin: 0px;
+  height: 100%;
+}
+
+@font-face {
+  font-family: fontOne;
+  src: url(../fonts/quantumProfit.ttf);
 }
 
 .header {
   text-align: center;
-  background-color: ;
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(208, 232, 255, 1) 20%);
+  background: rgb(36, 47, 64);
   padding: 0px;
   width: 100%;
+  color: white;
 }
 
 .header h1 {
   font-family: 'Ephesis', cursive;
-  padding: 10px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   margin: 0px;
   font-size: 45px;
+}
+
+h2, h3, h4, h5, h6 {
+  color: rgb(36, 47, 64);
+  font-family: fontOne;
+  font-size: 40px;
+  margin: 10px 0px 10px 10px;
+  padding-left: 20px;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /****** NAV STYLE ******/
 .nav {
   text-align: right;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(36, 47, 64) 30%);
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .nav a {
   padding: 8px 13px 8px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: black;
   text-align: right;
   font-size: 25px;
-  font-family: 'Varela Round', sans-serif;
+  font-family: fontOne;
   font-variant: small-caps;
+  color: white;
 }
 
 .nav a:hover {
-  color: rgb(0, 12, 124);
+  color: rgb(0, 12, 124); 
 }
 
-img {
-  width: 49%;
-  height: 500px;
-  margin: 5px;
+.navList {
+  list-style-type: none;
+}
+
+.navList li {
+  display: inline;
+}
+
+.mainImg img{
+  width: 80%;
+  text-align: center;
+  margin: 10px 8% 10px 8%;
+}
+
+/********** Expirence ***********/
+.experienceContent {
+  display: flex;
+  width: 100%;
+}
+
+.experienceContent div {
+  width: 33%;
+  height: 1000px;
+  font-size: 30px;
+  color: rgb(36, 47, 64);
+  text-align: center;
+  border: 5px solid rgb(36, 47, 64);
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
