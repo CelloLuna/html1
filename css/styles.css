@@ -1,33 +1,103 @@
+/* COLOR QUESTIONS */
+/* 1. I used an app called coolors that generats color palettes and picked colors I liked.*/
+/* 2. The pallette I chose is monochromatic. #282F44 #9197AE and white for the main nav text*/
+/* 3. The background color is a light blue-gray. The header and the majority of the text is a dark blue. Having dark text on a light background makes it easier to read and not having a white background is easier on your eyes in my opinion. */
+
+/* FONT QUESTIONS */
+/* 1. I used the Playfair Display - serif style for my entire web page*/
+/* 2. I have default weight for the entire web page but for sizes, headers are 40px, nav is 25px, and text content is 20px */
+
+/* Only element with the font-family tag*/
 body {
-  background-color: #ffffff;
+  background-color: #9197AE;
   padding: 0px;
   margin: 0px;
   height: 100%;
+  font-family: 'Playfair Display', serif;
 }
 
-@font-face {
-  font-family: fontOne;
-  src: url(../fonts/quantumProfit.ttf);
-}
-
+/***** HEADER AND NAV *****/
 .header {
-  text-align: center;
-  background: rgb(36, 47, 64);
+  background: #282F44;
   padding: 0px;
+  margin: 0;
   width: 100%;
   color: white;
 }
 
-.header h1 {
-  font-family: 'Ephesis', cursive;
-  padding: 20px 0px 0px 0px;
-  margin: 0px;
-  font-size: 45px;
+h1 {
+  margin: 0;
+}
+
+.logoImg {
+  height: 5%;
+  width: 10%;
+  padding: 20px 0px 0px 20px;
+}
+
+.nav {
+  text-align: right;
+  background: linear-gradient(0deg, #9197AE 0%, #282F44 30%);
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.nav a {
+  padding: 0px 13px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: right;
+  font-variant: small-caps;
+  color: white;
+}
+
+.nav a:hover {
+  color: rgb(0, 12, 124); 
+}
+
+.navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.navList li {
+  display: inline;
+}
+
+
+/***** MAIN CONTENT *****/
+
+.mainPage {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.mainImg{
+  width: 70%;
+  text-align: center;
+
+}
+.mainImg img {
+  width: 75%;
+}
+
+.about {
+  width: 25%;
+  padding-right: 5%;
+}
+.about p {
+  text-align: left;
+}
+.about h2 {
+  text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
-  color: rgb(36, 47, 64);
-  font-family: fontOne;
+  color: #282F44;
   font-size: 40px;
   margin: 10px 0px 10px 10px;
   padding-left: 20px;
@@ -39,44 +109,7 @@ hr{
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-/****** NAV STYLE ******/
-.nav {
-  text-align: right;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(36, 47, 64) 30%);
-  padding-bottom: 20px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
 
-.nav a {
-  padding: 8px 13px 8px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  text-align: right;
-  font-size: 25px;
-  font-family: fontOne;
-  font-variant: small-caps;
-  color: white;
-}
-
-.nav a:hover {
-  color: rgb(0, 12, 124); 
-}
-
-.navList {
-  list-style-type: none;
-}
-
-.navList li {
-  display: inline;
-}
-
-.mainImg img{
-  width: 80%;
-  text-align: center;
-  margin: 10px 8% 10px 8%;
-}
 
 /********** Expirence ***********/
 .experienceContent {
@@ -86,11 +119,37 @@ hr{
 
 .experienceContent div {
   width: 33%;
-  height: 1000px;
+  height: 700px;
   font-size: 30px;
-  color: rgb(36, 47, 64);
+  color: #282F44;
   text-align: center;
-  border: 5px solid rgb(36, 47, 64);
+  border: 5px solid #282F44;
   margin: 10px 10px 10px 10px;
   border-radius: 10px;
+}
+.experienceContent .p {
+  font-size: 20px;
+}
+
+.experienceContent img {
+  width: 90%;
+  height: 20%;
+}
+
+/********** Contact ***********/
+.contactContent {
+  display: flex;
+}
+.contactContent .button{
+  width: 20%;
+  height: 100px;
+  margin: 10px 50px 5px 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+
+.footer {
+  background: linear-gradient(0deg, #282F44 20%, #9197AE 30%);
+  height: 100px;
 }
