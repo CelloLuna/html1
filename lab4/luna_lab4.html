@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <!--Marcello Luna-->
+<head>
+  <meta charset="UTF-8">
+	<meta name="description" content="Wedding Violinist">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="author" content="Marcello Luna">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+
+  <style>
+
+    .one{grid-area: one;}
+    .two{grid-area: two;}
+    .three{grid-area: three;}
+    .four{grid-area: four;}
+    .five{grid-area: five;}
+    .button{grid-area: button;}
+
+    .grid-container {
+      display: grid;
+      height: 500px;
+      background-color: aqua;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 25% 25% 25% 25%;
+      grid-template-areas:
+        "one one two two"
+        "one one two two"
+        "three three four four"
+        "three three five button";
+    } 
+
+    .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-size: 30px;
+        border: 1px solid black;
+    }
+
+    div img {
+      height: 75%;
+      width: 75%;
+      padding: 40px;
+    }
+/* Media Queries*/
+      @media screen and (max-width: 1024px) {
+        body{
+          background-color: green;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          background-color: red;
+        }
+        .four{
+          display: none;
+        }
+        .five{
+          display:none;
+        }
+        .grid-container{
+          grid-template-areas:
+        "one one two two"
+        "one one two two"
+        "three three button button"
+        "three three button button";
+        }
+
+      } 
+</style>
+
+<script>
+  function backgroundChange() {
+    document.body.style.backgroundColor = getRandomColor();
+  }
+//https://stackoverflow.com/questions/1484506/random-color-generator
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="one"><img src="inspectImg.jpg"></div>
+  <div class="two"><img src="brookfieldZoo.png"></div>
+  <div class="three"><img src="landscapeTwo.jpg"></div>  
+  <div class="four">4</div>
+  <div class ="five">5</div> 
+  <div class="button"><button onclick="backgroundChange()">Change Background</button></div>
+</div>
+
+</body>
+</html>
+
+
