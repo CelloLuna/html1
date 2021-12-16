@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Marcello Luna Due: Dec 17-->
+<!--HEAD -->
+<head>
+  <!--Improvements-->
+  <!--I had pretty much a final prodcuty usability wise in assignment 4-->
+  <!--I have three meta tages that turn most  content into columns as well as alt tags in my images.-->
+  <!--I have 5 images/icons mostly placeholder at this point but did add two picture to show that I know how to, the logo and in the piano section-->
+	<title>Home Page</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Wedding Musician">
+	<meta name="keywords" content="Violin, Piano, Wedding">
+	<meta name="author" content="Marcello Luna">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<!-- BODY -->
+<body>
+  <!-- HEADER -->
+  <div class="header">
+  <header>
+      <div class="nonStickyHeader">
+        <h1><a href="#"><img src="images/logo.png" alt="Logo Image" class="logoImg"></a></h1>
+      </div>
+  </header>
+  </div>
+
+  <div class="stickyHeader">
+    <nav>
+      <ul class="navList">
+        <li><button onclick="topFunction();" id="toTop"><i class="fa fa-home fa-3x"></i></button></li>
+        <li><a href="#aboutId">About</a></li>
+        <li><a href="#experienceId">Experience</a></li>
+        <li><a href="#contactId">Schedule</a></li>
+      </ul>
+        
+    </nav>
+  </div>
+  <div class="mainPage">
+    <div class="mainImg">
+      <img src="https://via.placeholder.com/1280x720.png" alt="Main image">
+    </div>
+
+    <div id="aboutId" class="anchor"></div>
+    <div class="about">
+      <p class="ab">About</p>
+      <p class="p">This section will have a brief about section for maggie. It will have stuff like hobbies and interests and potentially education.</p>
+    </div>
+  </div>
+
+  <hr class="break">
+
+  <div class="navSection">
+    <!--EXPERIENCE-->
+    <div id="experienceId" class="anchor"></div>
+    <div class="experience">
+      <h3>My Experience</h3>
+    </div>
+
+    <div class="experienceContent">
+      <div class="section">
+        <p class="ab">Piano</p>
+        <div class="content">
+          <p class="p">This will have information about her history and experience with piano like jazz band.</p>
+          <img src="images/piano.JPG" alt="Piano Image">
+        </div>
+      </div>
+
+      <div class="section">
+        <p class ="ab">Violin</p>
+        <p class="p">This will have information about her history and experience with violin like orchestra.</p>
+      </div>
+
+      <div class="section">
+        <p class="ab">Work</p>
+        <div class="content">
+          <p class="p">This will have information on previous events she has done music for and potentially information about costs.</p>
+          <img src="https://via.placeholder.com/720x576.png" alt="Work Image">
+        </div>
+      </div>
+    </div>
+
+    <hr class="break">
+
+    <!--CONTACT AND SCHEDULING-->
+    <div id="contactId" class="anchor"></div>
+    <div class="contact">
+      <h4>Contact for Scheduling</h4>
+    </div>
+
+    <div class="contactContent">
+      <button class="button email">example@email.com</button>
+      <button class="button phone" type="button" id="b">123-456-7890</button>
+    </div>
+
+    <div class="footer">
+      <footer></footer>
+    </div>
+
+  </div>
+
+<script>
+
+  var button = document.getElementById("toTop");
+
+  window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "inline";
+  } else {
+    button.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+</script>
+</body>
+</html>

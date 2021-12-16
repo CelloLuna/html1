@@ -1,0 +1,272 @@
+body {
+  background-color: #9197AE;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #282F44;
+  font-size: 40px;
+  margin: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+
+.break{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.anchor {
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/***** HEADER *****/
+.header {
+  background: #282F44;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+.logoImg {
+  height: 12%;
+  width: 12%;
+  padding: 20px 0px 0px 20px;
+  min-width: 140px;
+}
+
+/***** NAV *****/
+.stickyHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+nav {
+  background: linear-gradient(0deg, #9197AE 0%, #282F44 30%);
+  text-align: right;
+  padding: 0px 0px 20px 0px;
+}
+
+nav a {
+  padding: 0px 13px 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: right;
+  font-variant: small-caps;
+  color: white;
+}
+nav a:hover {
+  color: #9197AE; 
+  text-decoration: underline;
+}
+
+.navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.navList li {
+  display: inline;
+}
+
+.navList button{
+  background-color: #282F44;
+  display: none;
+  height: auto;
+  color: white;
+  margin: 5px 0px 0px 0px;
+
+}
+
+
+/***** MAIN CONTENT *****/
+
+.mainPage {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.mainImg{
+  width: 50%;
+  text-align: center;
+}
+.mainImg img {
+  width: 100%;
+}
+
+/***** ABOUT *****/
+.about {
+  width: 25%;
+  border: 5px solid #282F44;
+  border-radius: 10px;
+  padding: 0px 5px 5px 5px;
+  height: 400px;
+}
+
+.about .p {
+  text-align: left;
+  overflow-y: scroll;
+  font-size: 20px;
+  height: 70%;
+  color: #282F44;
+}
+
+.about .p::-webkit-scrollbar {
+  display: none;
+}
+.about .ab {
+  text-align: center;
+  font-size: 30px;
+  color: #282F44;
+}
+
+/***** EXPERIENCE ******/
+.experienceContent {
+  display: flex;
+  width: 100%;
+}
+
+.experienceContent .section {
+  width: 33%;
+  height: auto;
+  font-size: 30px;
+  color: #282F44;
+  text-align: center;
+  border: 5px solid #282F44;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  min-height: 300px;
+  max-height: 650px;
+  overflow-y: scroll;
+}
+.experienceContent .p {
+  font-size: 20px;
+  height: 70%;
+  max-height: 500px;
+}
+
+.section::-webkit-scrollbar{
+  display: none;
+}
+
+.experienceContent img {
+  width: 90%;
+  height: 20%;
+}
+
+/***** CONTACT ******/
+.contactContent {
+  display: flex;
+}
+.contactContent .button{
+  width: 50%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 95px;
+  margin: 10px 25px 5px 25px;
+  background-color: #282F44;
+  border: 5px solid #282F44;
+  color: #9197AE;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: #9197AE;
+  color: #282F44;
+}
+
+/***** FOOTER *****/
+.footer {
+  background: linear-gradient(0deg, #282F44 20%, #9197AE 30%);
+  height: 100px;
+}
+
+/***** Scroll *****/
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #6e7385;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #48557a;
+  border-radius: 10px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #282F44;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (max-width: 768px) {
+  .logoImg {
+    width: 140px;
+  }
+
+  .mainPage {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainImg {
+    width: 80%;
+  }
+
+  .about {
+    width: 75%;
+    margin: 8px 0px 0px 0px;
+  }
+
+  .ab {
+    margin: 7px 0px 0px 0px;
+  }
+}
+
+@media screen  and (max-width: 480px) {
+  .mainImg {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .experienceContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experienceContent .section {
+    width: 75%;
+  }
+
+  .contactContent {
+    flex-direction: column;
+    align-items: center;
+  }
+}
